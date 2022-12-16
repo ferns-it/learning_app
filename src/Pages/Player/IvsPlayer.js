@@ -16,7 +16,7 @@ const IVSPlayer = (props) => {
     "https://ferns-it.com/videojs/assets/amazon-ivs-wasmworker.min.wasm";
 
   const playbackUrl =
-    "https://62417c80f148.ap-south-1.playback.live-video.net/api/video/v1/ap-south-1.300996695197.channel.B0KlX9sLPQ0A.m3u8";
+    "https://62417c80f148.ap-south-1.playback.live-video.net/api/video/v1/ap-south-1.300996695197.channel.9TFuDJMZC1zs.m3u8";
 
   const channelArn = "arn:aws:ivs:ap-south-1:300996695197:channel/B0KlX9sLPQ0A";
 
