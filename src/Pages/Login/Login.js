@@ -27,15 +27,10 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validateForm(formValues));
-    setIsSubmit(true);
-  };
-
-  useEffect(() => {
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      setIsLoading(true);
+    if (Object.keys(validateForm(formValues)).length === 0) {
       loginUser();
     }
-  }, [isSubmit]);
+  };
 
   function loginUser() {
     if (formValues.username && formValues.password) {
@@ -43,6 +38,8 @@ function Login() {
         username: formValues.username,
         password: formValues.password,
       };
+
+      setIsLoading(true);
 
       $.ajax({
         url: endpoints.userLogin,
@@ -168,7 +165,7 @@ function Login() {
             </div>
             <div className="col-lg-6 col-md-6 vid">
               <div className="video_layer">
-              <Lottie className="lottie" animationData={LottieAnime}></Lottie>
+                <Lottie className="lottie" animationData={LottieAnime}></Lottie>
               </div>
             </div>
           </div>
